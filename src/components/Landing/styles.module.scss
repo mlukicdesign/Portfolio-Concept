@@ -1,4 +1,4 @@
-.main{
+.main {
     position: relative;
     display: flex;
     height: 100vh;
@@ -6,25 +6,26 @@
     overflow: hidden;
   }
   
-  .main img{
+  .main img {
     object-fit: cover;
+    background-attachment: fixed;
   }
   
-  .sliderContainer{
+  .sliderContainer {
     position: absolute;
     top: calc(100vh - 350px);
   }
   
-  .slider{
+  .slider {
     position: relative;
     white-space: nowrap;
   }
   
-  .slider p{
+  .slider p {
     position: relative;
     margin: 0px;
     color: white;
-    font-size: 230px;
+    font-size: 200px;
     font-weight: 500;
     padding-right: 50px;
   }
