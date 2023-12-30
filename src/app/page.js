@@ -1,6 +1,8 @@
 "use client";
 import { useEffect } from "react";
 import Landing from "../components/landing";
+import Projects from "../components/projects";
+import Description from "@/components/Description";
 
 export default function Home() {
   useEffect(() => {
@@ -13,13 +15,14 @@ export default function Home() {
   return (
     <main>
       <Landing />
+      <Description />
+      <Projects />
       {/* <AnimatePresence mode='wait'>
 
         {isLoading && <Preloader />}
 
       </AnimatePresence>
 
-      <Landing />
 
       <Description />
 

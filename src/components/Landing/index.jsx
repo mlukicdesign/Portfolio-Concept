@@ -3,10 +3,11 @@ import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import styles from "./styles.module.scss";
-import { useRef, useEffect } from "react";
+import { useRef, useLayoutEffect } from "react";
 
 
 export default function Header() {
+
   const firstText = useRef(null);
   const secondText = useRef(null);
   const slider = useRef(null);
@@ -15,17 +16,17 @@ export default function Header() {
 
 
 
-  useEffect( () => {
+  useLayoutEffect( () => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.to(slider.current, {
       scrollTrigger: {
         trigger: document.documentElement,
-        scrub: 0.05, // Adjust the scrub value to slow down the xScroll speed
+        scrub: 0.5, // Adjust the scrub value to slow down the xScroll speed
         start: 0,
         end: window.innerHeight,
         onUpdate: e => direction = e.direction * -1
       },
-      x: "-100px",
+      x: "-1000px",
     })
     requestAnimationFrame(animate);
   }, [])
@@ -44,7 +45,7 @@ export default function Header() {
     gsap.set(firstText.current, {xPercent: xPercent})
     gsap.set(secondText.current, {xPercent: xPercent})
 requestAnimationFrame(animate);
-    xPercent += 0.1 * direction;
+    xPercent += 0.02 * direction;
   }
 
 
@@ -55,6 +56,8 @@ return (
     <Image src="/images/background.jpg" 
     fill={true} 
     alt="Background" 
+    background="true"
+    styles={styles.backgroundImage}
     />
     <div className={styles.sliderContainer}>
       <div ref={slider} className={styles.slider}>

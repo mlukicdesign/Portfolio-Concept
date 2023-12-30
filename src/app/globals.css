@@ -3,3 +3,14 @@ body {
   overflow: hidden; /* Hide scrollbars */
   /* cursor: wait; Add after Preloader */
 }
+
+
+@font-face {
+  font-family: 'Neue Machina';
+  src: url("../../public/fonts/PPNeueMachina-PlainRegular.woff") format("woff"),
+  url("../../public/fonts/PPNeueMachina-PlainRegular.woff2") format("woff2"),
+}
+
+h1, h2, h3, p {
+  font-family: 'Neue Machina';
+}
