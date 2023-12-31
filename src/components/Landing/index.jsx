@@ -21,12 +21,12 @@ export default function Header() {
     gsap.to(slider.current, {
       scrollTrigger: {
         trigger: document.documentElement,
-        scrub: 0.5, // Adjust the scrub value to slow down the xScroll speed
+        scrub: 0.2, // Adjust the scrub value to slow down the xScroll speed
         start: 0,
         end: window.innerHeight,
         onUpdate: e => direction = e.direction * -1
       },
-      x: "-1000px",
+      x: "-500px",
     })
     requestAnimationFrame(animate);
   }, [])
@@ -45,7 +45,7 @@ export default function Header() {
     gsap.set(firstText.current, {xPercent: xPercent})
     gsap.set(secondText.current, {xPercent: xPercent})
 requestAnimationFrame(animate);
-    xPercent += 0.02 * direction;
+    xPercent += 0.03 * direction;
   }
 
 

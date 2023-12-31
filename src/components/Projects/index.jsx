@@ -9,12 +9,17 @@ import Modal from '../Projects/Modal';
 const projects = [
     {
         title: "title",
-        src: "src.png",
+        src: "project-placeholder.jpg",
         color: "#000",
     },
     {
         title: "title",
-        src: "src.png",
+        src: "project-placeholder.jpg",
+        color: "#000",
+    },
+    {
+        title: "title",
+        src: "project-placeholder.jpg",
         color: "#000",
     }
 ]

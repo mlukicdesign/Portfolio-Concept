@@ -22,7 +22,7 @@ export default function Description() {
                     })
                 }
             </p>
-            <motion.p variants={opacity} animate={isInView ? "open" : "closed"} className={styles.mask}>Let's work together</motion.p>
+            <motion.p variants={opacity} animate={isInView ? "open" : "closed"}>Let's work together</motion.p>
                 <div data-scroll data-scroll-speed={0.1}>
 
                 </div>
